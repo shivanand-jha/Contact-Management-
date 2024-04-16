@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+    <link href="/assets/styles.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <form action="/update/<%= user._id %>" method="POST">
+        <div class="form-container">
+            <label for="firstName">First Name:</label>
+            <input type="text" name="firstName" value="<%= user.firstName %>"  placeholder="First Name">
+            <label for="lastName">Last Name:</label>
+            <input type="text" name="lastName"  value="<%= user.lastName %>" placeholder="Last Name">
+            <label for="role">Designation:</label>
+            <input type="text" name="role"     value="<%= user.role %>"  placeholder="Designation">
+            <label for="tel">Contact Number:</label>
+            <input type="tel" name="tel"   value="<%= user.tel %>"   placeholder="Contact Number">
+            <label for="email">Email:</label>
+            <input type="email" name="email"    value="<%= user.email %>"   placeholder="Email">
+            <label for="description">Description:</label>
+            <input type="text" name="description"  value="<%= user.description %>"  placeholder="Description">
+            <button type="submit">Update</button>
+        </div>
+    </form>
+</body>
+</html>
